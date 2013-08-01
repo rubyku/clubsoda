@@ -13,7 +13,7 @@
 	<!-- Set the viewport width to device width for mobile -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+	<title><%= content_for?(:title) ? yield(:title) : "Club Soda" %></title>
 
 	<%= stylesheet_link_tag    "application" %>
 	<%= javascript_include_tag "vendor/custom.modernizr" %>
@@ -23,29 +23,41 @@
 <body>
 
   <nav class="top-bar">
-    <ul class="title-area">
-      <!-- Title Area -->
-      <li class="name">
-        <h1><a href="/">Club Soda</a></h1>
-      </li>
-      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-    </ul>
-
-    <section class="top-bar-section">
-      <!-- Right Nav Section -->
-      <ul class="right">
-        <li class="divider hide-for-small"></li>
-        <li><a href="/process">Our Process</a></li>
-        <li class="divider hide-for-small"></li>
-        <li><a href="/work">Our Work</a></li>
-        <li class="divider hide-for-small"></li>
-        <li><a href="/hire">Hire us</a></li>
+    <div class="row" style="width: 1000px">
+      <ul class="title-area">
+        <!-- Title Area -->
+        <li class="name">
+          <a href="/"><%= image_tag 'logo.png', :style => "margin-top: 7px" %></a>
+        </li>
+        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
       </ul>
-    </section>
-  </nav>
 
-  <%= yield %>
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li class="divider hide-for-small"></li>
+          <li><a href="/process">Our Process</a></li>
+          <li class="divider hide-for-small"></li>
+          <li><a href="/work">Our Work</a></li>
+          <li class="divider hide-for-small"></li>
+          <li><a href="/hire">Hire us</a></li>
+        </ul>
+      </section>
+    </div>
+  </nav>
+  <div style="height: 3px; background: #7a7573"></div>
+  
+  <div class="container" style="margin-bottom: 100px">
+    <%= yield %>
+  </div>
+
+  <div style="height: 300px; margin-top: 100px; background-color: #372f2b; color: white; padding-top: 30px">
+    <center>
+    <p>Copyright 2013</p>
+    <p>All Rights Reserved</p>
+    </center>
+  </div>
 
 </body>
 </html>
