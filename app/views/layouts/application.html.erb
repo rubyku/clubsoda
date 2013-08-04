@@ -16,6 +16,8 @@
 	<title><%= content_for?(:title) ? yield(:title) : "Club Soda" %></title>
 
 	<%= stylesheet_link_tag    "application" %>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>
+
 	<%= javascript_include_tag "vendor/custom.modernizr" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -40,6 +42,8 @@
           <li><a href="/process">Our Process</a></li>
           <li class="divider hide-for-small"></li>
           <li><a href="/work">Our Work</a></li>
+          <li class="divider hide-for-small"></li>
+          <li><a href="/about">About us</a></li>
           <li class="divider hide-for-small"></li>
           <li><a href="/hire">Hire us</a></li>
         </ul>

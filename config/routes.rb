@@ -3,6 +3,7 @@ Clubsoda::Application.routes.draw do
 
   match '/process'                => 'home#show', :id => 'process'
   match '/work'                   => 'home#show', :id => 'work'
-  match '/hire'                  => 'home#show', :id => 'hire'
+  match '/hire'                   => 'home#show', :id => 'hire'
+  match '/about'                  => 'home#show', :id => 'about'
 
 end
