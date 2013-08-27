@@ -6,4 +6,6 @@ Clubsoda::Application.routes.draw do
   match '/hire'                   => 'home#show', :id => 'hire'
   match '/about'                  => 'home#show', :id => 'about'
 
+  match '/contact_form'           => 'home#contact_form'
+
 end

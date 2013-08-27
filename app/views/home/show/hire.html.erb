@@ -7,39 +7,47 @@
     </div>
   </div>
 
-  <div class="row">
-    <form>
+  <%# Flash %>
+  <div class='row'>
+    <%- if flash[:notice].present? -%>
+      <div class="alert-box">
+        <%= flash[:notice] %>
+      </div>
+    <%- end -%>
+  </div>
+
+  <%= form_tag(contact_form_path, :method => 'post') do %>
+    <div class="row">
       <fieldset>
         <div class="row">
           <div class="large-4 columns">
             <label>What's your name?</label>
-            <input type="text" placeholder="Captain Henry Dombey">
+            <%= text_field_tag "name", @name, placeholder: "Captain Henry Dombey" %>
           </div>
         </div>
 
         <div class="row">
           <div class="large-4 columns">
             <label>What's your email?</label>
-            <input type="text" placeholder="CaptainHenry@gmail.com">
+            <%= email_field_tag "email", @email, placeholder: "CaptainHenry@gmail.com" %>
           </div>
         </div>
 
         <div class="row">
           <div class="large-6 columns">
             <label>What kind of project are you thinking about?</label>
-            <textarea placeholder="I'd love to work with you on my upcoming project documenting ship builders."></textarea>
+            <%= text_area_tag "message", @message, placeholder: "I'd love to work with you on my upcoming project documenting ship builders." %>
           </div>
         </div>
-
       </fieldset>
-    </form>
-
-  </div>
-
-  <div class="row">
-    <div class="large-12 columns">
-      <p><a href="/process" class="large button">Send Message</a></p>
     </div>
-  </div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <p><%= submit_tag "Send message", :class => "large button" %></p>
+      </div>
+    </div>
+
+  <% end %>
 
 </div>
