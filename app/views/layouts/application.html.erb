@@ -18,35 +18,32 @@
 	<%= stylesheet_link_tag    "application" %>
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>
 
-	<%= javascript_include_tag "vendor/custom.modernizr" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
   <nav class="top-bar">
-    <div class="row" style="width: 1000px">
-      <ul class="title-area">
-        <!-- Title Area -->
-        <li class="name">
-          <a href="/"><%= image_tag 'logo.png', :style => "margin-top: 7px" %></a>
-        </li>
-        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-      </ul>
+    <ul class="title-area">
+      <!-- Title Area -->
+      <li class="name">
+        <a href="/"><%= image_tag 'logo.png', :style => "padding-top: 0.45em; padding-left: 0.45em" %></a>
+      </li>
+      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
 
-      <section class="top-bar-section">
-        <!-- Right Nav Section -->
-        <ul class="right">
-          <li class="divider hide-for-small"></li>
-          <li><a href="/process">Our Process</a></li>
-          <li class="divider hide-for-small"></li>
-          <li><a href="/work">Our Work</a></li>
-          <li class="divider hide-for-small"></li>
-          <li><a href="/hire">Hire us</a></li>
-        </ul>
-      </section>
-    </div>
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class="divider hide-for-small"></li>
+        <li><a href="/process">Our Process</a></li>
+        <li class="divider hide-for-small"></li>
+        <li><a href="/work">Our Work</a></li>
+        <li class="divider hide-for-small"></li>
+        <li><a href="/hire">Hire us</a></li>
+      </ul>
+    </section>
   </nav>
   <div style="height: 3px; background: #7a7573"></div>
 
@@ -62,4 +59,7 @@
   </div>
 
 </body>
+<script>
+  $(document).foundation();
+</script>
 </html>
